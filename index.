@@ -1,267 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ayala Jerseys — Tienda de Jerseys</title>
-  <meta name="description" content="Jerseys de fútbol, NBA y béisbol. Envíos a todo México. Atención por WhatsApp.">
-  <!-- Tipografías -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      /* Paleta (inspirada en 'azules deportivos') */
-      --primario:#0a3d91;
-      --acento:#00b4ff;
-      --fondo:#f6f8fc;
-      --texto:#1d2433;
-      --gris:#8a94a6;
-      --claro:#ffffff;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--texto);background:var(--claro);line-height:1.6}
-    h1,h2{font-family:"Playfair Display",serif;margin:0 0 .4rem}
-    h3{margin:.2rem 0 .3rem}
-    a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block}
-    .container{max-width:1120px;margin:0 auto;padding:0 20px}
-    /* Header */
-    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.86);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid #e9eef7}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .brand{display:flex;align-items:center;gap:10px}
-    .logo{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,var(--primario),#173fb3 60%,var(--acento));display:grid;place-items:center;color:#fff;font-weight:800}
-    .menu{display:flex;gap:18px}
-    .menu a{padding:8px 10px;border-radius:10px}
-    .menu a:hover{background:#eef5ff}
-    /* Hero */
-    .hero{position:relative;color:#fff;background:linear-gradient(160deg,#031b47,#0a3d91);}
-    .hero::before{content:"";position:absolute;inset:0;opacity:.22;background:url('https://images.unsplash.com/photo-1547347298-4074fc3086f0?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;mix-blend:screen}
-    .hero .wrap{position:relative;padding:120px 0;display:grid;gap:14px}
-    .sub{opacity:.9}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
-    .btn{display:inline-block;padding:12px 18px;border-radius:12px;font-weight:600;border:2px solid transparent;transition:.15s transform}
-    .btn:hover{transform:translateY(-1px)}
-    .btn.primary{background:var(--acento);color:#03243f}
-    .btn.ghost{background:transparent;border-color:#8bdcff;color:#fff}
-    /* Sections */
-    section{padding:70px 0}
-    .lead{color:#3a4556;margin:0 0 22px}
-    /* Cards */
-    .grid{display:grid;gap:22px}
-    .cards{grid-template-columns:repeat(3,minmax(0,1fr))}
-    @media (max-width:900px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media (max-width:640px){.cards{grid-template-columns:1fr}}
-    .card{border:1px solid #e6ecf7;border-radius:16px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
-    .card .thumb{aspect-ratio:4/3;background:#eef4ff;overflow:hidden}
-    .card .body{padding:14px 14px 16px}
-    .price{font-weight:700;color:var(--primario)}
-    .card .actions{margin-top:auto;padding:0 14px 16px}
-    /* Promos */
-    .promo{background:linear-gradient(180deg,#f7fbff,#eef6ff)}
-    .promos{grid-template-columns:repeat(3,minmax(0,1fr))}
-    @media (max-width:900px){.promos{grid-template-columns:1fr}}
-    .promo-item{padding:18px;border:1px dashed #b8d9ff;border-radius:14px;background:#fff}
-    /* About */
-    .about{grid-template-columns:1.1fr 1fr;align-items:center}
-    @media (max-width:900px){.about{grid-template-columns:1fr}}
-    /* Contact */
-    .contact{background:var(--fondo)}
-    form{display:grid;gap:12px}
-    input,textarea{width:100%;padding:12px 14px;border:1px solid #dfe6f3;border-radius:10px;font:inherit}
-    textarea{min-height:120px;resize:vertical}
-    .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    @media (max-width:640px){.two{grid-template-columns:1fr}}
-    /* Footer */
-    footer{background:#0c1224;color:#c9d4ff}
-    footer .foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:24px 0}
-    /* Badge */
-    .badge{display:inline-block;font-size:.8rem;padding:6px 10px;background:#e8f5ff;border-radius:999px;color:#0a3d91;font-weight:600}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayala Jerseys</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; }
+        header { background: #1a1a1a; color: white; padding: 20px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: 600; }
+        nav a:hover { text-decoration: underline; }
+        section { padding: 40px; max-width: 1000px; margin: auto; }
+        .banner { text-align: center; background: url('https://images.unsplash.com/photo-1517649763962-0c623066013b') center/cover; color: white; padding: 100px 20px; }
+        .banner h1 { font-size: 2.5em; }
+        .cta { background: #e63946; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px; }
+        .productos { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+        .producto { border: 1px solid #ccc; padding: 15px; width: 250px; text-align: center; border-radius: 10px; }
+        .producto img { max-width: 100%; border-radius: 5px; }
+        footer { background: #1a1a1a; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+        input, textarea { width: 100%; padding: 10px; margin: 10px 0; }
+        button { padding: 10px 20px; background: #1a1a1a; color: white; border: none; cursor: pointer; }
+        button:hover { background: #333; }
+        @media (max-width: 768px) {
+            .productos { flex-direction: column; align-items: center; }
+        }
+    </style>
 </head>
 <body>
 
 <header>
-  <div class="container nav">
-    <a class="brand" href="#inicio">
-      <div class="logo">AJ</div>
-      <strong>Ayala Jerseys</strong>
-    </a>
-    <nav class="menu">
-      <a href="#inicio">Inicio</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#productos">Productos</a>
-      <a href="#blog">Blog</a>
-      <a href="#contacto">Contacto</a>
+    <h1>Ayala Jerseys</h1>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
     </nav>
-  </div>
 </header>
 
-<!-- INICIO -->
-<section id="inicio" class="hero">
-  <div class="container wrap">
-    <span class="badge">Diseño responsive</span>
-    <h1>Tu pasión, tu jersey.</h1>
-    <p class="sub">Sitio institucional de Ayala Jerseys: catálogo de fútbol, NBA y béisbol, atención por WhatsApp y envíos nacionales.</p>
-    <div class="cta">
-      <a class="btn primary" href="#productos">Ver productos</a>
-      <a class="btn ghost" href="#contacto">Contáctanos</a>
-    </div>
-  </div>
+<section id="inicio" class="banner">
+    <h1>Tu pasión, tu jersey</h1>
+    <p>Fútbol, NBA y béisbol al alcance de un clic</p>
+    <a href="#productos" class="cta">Ver Productos</a>
 </section>
 
-<!-- NOSOTROS -->
 <section id="nosotros">
-  <div class="container">
-    <div class="grid about">
-      <div>
-        <h2>Quiénes somos</h2>
-        <p class="lead">Somos una tienda mexicana especializada en camisetas deportivas. Creemos en el deporte como identidad y comunidad.</p>
-        <h3>Historia</h3>
-        <p>Nacimos como proyecto en redes sociales y crecimos gracias a fanáticos que confían en nuestra calidad y servicio.</p>
-        <h3>Misión</h3>
-        <p>Acercar jerseys de calidad a precios justos, con atención rápida y envíos a todo México.</p>
-        <h3>Visión y valores</h3>
-        <p>Ser la tienda de referencia para fans y jugadores. Valoramos honestidad, cercanía y pasión deportiva.</p>
-      </div>
-      <figure style="margin:0;border-radius:16px;overflow:hidden">
-        <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=1400&auto=format&fit=crop" alt="Equipo mostrando balones y camisetas">
-      </figure>
-    </div>
-  </div>
+    <h2>Quiénes Somos</h2>
+    <p>En Ayala Jerseys nos apasiona el deporte tanto como a ti. Nuestra misión es ofrecer jerseys de la mejor calidad, de tus equipos favoritos del fútbol europeo, NBA y béisbol.</p>
+    <p><strong>Misión:</strong> Vestir la pasión deportiva de nuestros clientes.</p>
+    <p><strong>Visión:</strong> Ser la tienda online de jerseys más confiable y reconocida.</p>
+    <p><strong>Valores:</strong> Calidad, compromiso, pasión y confianza.</p>
 </section>
 
-<!-- PRODUCTOS / SERVICIOS -->
-<section id="productos" style="background:var(--fondo)">
-  <div class="container">
-    <h2>Tienda / Productos</h2>
-    <p class="lead">Catálogo con características, precio y botón de compra/contacto.</p>
-
-    <div class="grid cards">
-      <!-- Producto 1 -->
-      <article class="card">
-        <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1200&auto=format&fit=crop" alt="Jersey Real Madrid">
+<section id="productos">
+    <h2>Productos</h2>
+    <div class="productos">
+        <div class="producto">
+            <img src="https://images.unsplash.com/photo-1606813902912-6a89a6e5c1c6" alt="Jersey de Fútbol">
+            <h3>Jersey de Fútbol</h3>
+            <p>$1,200 MXN</p>
+            <button>Comprar</button>
         </div>
-        <div class="body">
-          <h3>Real Madrid 24/25 (Local)</h3>
-          <div class="price">$1,299 MXN</div>
-          <p>Tela respirable • Tallas S–XL • Corte atlético</p>
+        <div class="producto">
+            <img src="https://images.unsplash.com/photo-1579983926774-3f65d5f4dd58" alt="Jersey NBA">
+            <h3>Jersey NBA</h3>
+            <p>$1,400 MXN</p>
+            <button>Comprar</button>
         </div>
-        <div class="actions">
-          <a class="btn primary" href="https://wa.me/525500000000?text=Quiero%20el%20Jersey%20del%20Real%20Madrid%2024/25" target="_blank" rel="noopener">Comprar / WhatsApp</a>
+        <div class="producto">
+            <img src="https://images.unsplash.com/photo-1583343246486-bd9776e8c735" alt="Jersey Béisbol">
+            <h3>Jersey Béisbol</h3>
+            <p>$1,300 MXN</p>
+            <button>Comprar</button>
         </div>
-      </article>
-
-      <!-- Producto 2 -->
-      <article class="card">
-        <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1543326727-cf6c39fe86e4?q=80&w=1200&auto=format&fit=crop" alt="Jersey FC Barcelona">
-        </div>
-        <div class="body">
-          <h3>FC Barcelona Edición Especial</h3>
-          <div class="price">$1,349 MXN</div>
-          <p>Detalles premium • Secado rápido • Tallas S–XL</p>
-        </div>
-        <div class="actions">
-          <a class="btn primary" href="https://wa.me/525500000000?text=Me%20interesa%20Barcelona%20Edici%C3%B3n%20Especial" target="_blank" rel="noopener">Comprar / WhatsApp</a>
-        </div>
-      </article>
-
-      <!-- Producto 3 -->
-      <article class="card">
-        <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?q=80&w=1200&auto=format&fit=crop" alt="Jersey Yankees MLB">
-        </div>
-        <div class="body">
-          <h3>Yankees MLB</h3>
-          <div class="price">$1,199 MXN</div>
-          <p>Clásico de la MLB • Tallas XS–XL • Corte regular</p>
-        </div>
-        <div class="actions">
-          <a class="btn primary" href="https://wa.me/525500000000?text=Hola,%20quiero%20el%20Jersey%20de%20los%20Yankees" target="_blank" rel="noopener">Comprar / WhatsApp</a>
-        </div>
-      </article>
     </div>
-
-    <div class="grid promos" style="margin-top:22px">
-      <div class="promo-item">
-        <h3>10% primera compra</h3>
-        <p>Usa el cupón <strong>AYALA10</strong>.</p>
-      </div>
-      <div class="promo-item">
-        <h3>Especial Europa</h3>
-        <p>Descuentos semanales en jerseys europeos.</p>
-      </div>
-      <div class="promo-item">
-        <h3>Envío gratis</h3>
-        <p>En pedidos mayores a $2,000 MXN (nacional).</p>
-      </div>
-    </div>
-  </div>
 </section>
 
-<!-- BLOG / NOTICIAS (opcional) -->
-<section id="blog">
-  <div class="container">
-    <h2>Blog / Noticias</h2>
-    <p class="lead">Publicaciones relacionadas con lanzamientos y consejos.</p>
-    <div class="grid cards">
-      <article class="card">
-        <div class="thumb">
-          <img src="https://images.unsplash.com/photo-1521417531039-56baf2a9f3b0?q=80&w=1200&auto=format&fit=crop" alt="Lanzamiento">
-        </div>
-        <div class="body">
-          <h3>Lanzamiento nueva colección 24/25</h3>
-          <p>Recién llegados: modelos de Europa con telas técnicas y ajuste mejorado.</p>
-        </div>
-        <div class="actions">
-          <a class="btn primary" href="#contacto">Quiero más info</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACTO -->
-<section id="contacto" class="contact">
-  <div class="container">
+<section id="contacto">
     <h2>Contacto</h2>
-    <p class="lead">Completa el formulario o escríbenos por WhatsApp. También te dejamos un mapa de referencia (simulado).</p>
-    <div class="grid" style="grid-template-columns:1.1fr 1fr">
-      <div>
-        <form onsubmit="event.preventDefault(); alert('¡Gracias! Tu mensaje fue simulado para esta entrega.');">
-          <div class="two">
-            <input type="text" name="nombre" placeholder="Nombre" required>
-            <input type="email" name="email" placeholder="Correo" required>
-          </div>
-          <input type="tel" name="tel" placeholder="Teléfono (opcional)">
-          <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
-          <button class="btn primary" type="submit">Enviar</button>
-          <a class="btn" style="border:2px solid #dfe6f3" href="https://wa.me/525500000000" target="_blank" rel="noopener">WhatsApp</a>
-        </form>
-        <p style="color:var(--gris);margin-top:10px;">Horarios: Lun–Sáb 10:00–19:00 · Correo: ventas@ayalajerseys.mx</p>
-      </div>
-      <div>
-        <!-- Mapa simulado (iframe de Google Maps a CDMX) -->
-        <div style="border-radius:14px;overflow:hidden;border:1px solid #e6ecf7">
-          <iframe
-            title="Mapa simulado"
-            src="https://maps.google.com/maps?q=Ciudad%20de%20M%C3%A9xico&t=&z=12&ie=UTF8&iwloc=&output=embed"
-            width="100%" height="320" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
+    <form>
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo" required>
+        <textarea placeholder="Mensaje" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+    <p>📍 Zamora, Michoacán</p>
+    <p>📧 contacto@ayalajerseys.com</p>
+    <p>📱 WhatsApp: 351-123-4567</p>
 </section>
 
 <footer>
-  <div class="container foot">
-    <small>© 2025 Ayala Jerseys — Todos los derechos reservados.</small>
-    <div style="display:flex;gap:12px;flex-wrap:wrap">
-      <a href="#">Aviso de Privacidad</a><span>•</span><a href="#">Términos</a>
-    </div>
-  </div>
+    <p>© 2025 Ayala Jerseys. Todos los derechos reservados.</p>
 </footer>
 
 </body>
